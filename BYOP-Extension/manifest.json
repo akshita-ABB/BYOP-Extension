@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "Maintenance Assistant Chatbot",
+    "version": "1.0",
+    "description": "Smart local assistant for asset maintenance using your custom LLM backend.",
+    "permissions": [
+        "scripting",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "http://localhost:8000/"
+    ],
+    "action": {
+        "default_icon": {
+            "128": "icons/icon128.png"
+        }
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "icons": {
+        "128": "icons/icon128.png"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "popup.html",
+                "popup.js",
+                "styles.css"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
